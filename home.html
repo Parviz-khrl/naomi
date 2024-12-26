@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Password Protected Website</title>
+    <style>
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top left, #6a11cb 25%, black 60%);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
+}
+.container {
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    max-width: 500px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+button {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 126, 95, 0.4);
+}
+audio {
+    margin-top: 40px; /* Increase this value for more margin */
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.hidden {
+    display: none;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+.lyrics-container {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8); /* Darker background for better text visibility */
+    color: #fff;
+    max-width: 500px;
+    width: 90%;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow-y: scroll; /* Enable vertical scrolling */
+    max-height: 200px; /* Set a maximum height for the container */
+}
+.lyrics {
+    font-size: 1em;
+    line-height: 1.6;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .container {
+        padding: 20px;
+    }
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .lyrics {
+        font-size: 0.9em;
+    }
+}
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .container {
+                padding: 20px;
+            }
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            .lyrics {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="password-protection" class="container">
+        <h1>Password Protected</h1>
+        <p>Please enter the password to access the content.<br>(The first day we met)</p>
+        <input type="password" id="password-input" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error-message" style="color: #f44336; display: none;">Incorrect password. Try again.</p>
+    </div>
+
+    <div id="content" class="hidden">
+        <div id="page2" class="container visible">
+            <h1>Next to You</h1>
+            <audio controls>
+                <source src="out.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="lyrics-container">
+            <div class="lyrics">
+                Feel like time stood still for a night<br>
+                And I wanted to stay for a while<br>
+                Cause I know myself too well I want you close to me baby<br>
+                And you tell me all the things you like<br>
+                And I’m writing them all in my head<br>
+                And Now ur in my bed<br>
+                An angel when u sleep<br>
+                I’m holding u so close<br>
+                Just so u know it’s safe<br>
+                I feel you pulling back<br>
+                Cause all the hurt before<br>
+                I kiss u on ur neck<br>
+                To show u that it’s real<br>
+                But I’ve been hurt before<br>
+                So I’m scared to fall in love<br>
+                But hold my hand in yours<br><br>
+                Let’s fall<br>
+                Oh fall<br>
+                Oh fall<br>
+                Oh baby hold my hands and let’s just<br>
+                Fall<br>
+                Oh baby hold my hands and let’s just<br><br>
+                Heart is beating, skin to skin hold my breath<br>
+                Take my hands, place it up, on ur chest<br>
+                Look at me, with those eyes, I’m obsessed<br>
+                Kiss u slow, then u smile, in ur sleep<br>
+                When it’s time, you don’t want me to leave<br>
+                Wrap yourself around my body make it see<br>
+                When it’s time, I don’t want you to leave<br>
+                How it feels when u right next to me<br>
+                Right next to me right next me<br>
+                I’ll break those walls if u let me<br>
+                I’ll hold you close I’ll make u see<br>
+                So hold my hands in yours<br><br>
+                Let’s fall<br>
+                Oh fall<br>
+                Oh fall<br>
+                Oh baby hold my hands and let’s just<br>
+                Fall<br>
+                Oh baby hold my hands and let’s just<br><br>
+                Oh I hear your voice calling<br>
+                I can hear your heart beating on mine<br>
+                Oh I want you in my arms now<br>
+                Oh baby come<br>
+                Oh baby come
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const password = "09032024";
+
+        function checkPassword() {
+            const userPassword = document.getElementById('password-input').value;
+            if (userPassword === password) {
+                document.getElementById('password-protection').classList.add('hidden');
+                document.getElementById('content').classList.remove('hidden');
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
